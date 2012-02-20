@@ -29,7 +29,9 @@ Falta o principal, a interface com o usuário.
 A principal ajuda que eu gostaria de ter é com essa interface. Se você quiser ajudar você deve seguir o fluxo padrão em projetos aqui no Github.
 
 1 - Faça um fork
+
 2 - Desenvolva algo maneiro
+
 3 - Envie um pull request
 
 Se tiver dúvidas sobre se o que você quer fazer segue a linha do que quero por no projeto basta me enviar uma mensagem. Assim você não perde tempo fazendo algo que vai contra a idéia do projeto.
