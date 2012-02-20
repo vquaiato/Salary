@@ -1,12 +1,10 @@
 # Salários
 
-### O projeto
+## O projeto
 
-O objetivo básico desse projeto é fornecer uma resposta a pergunta:
+O objetivo básico desse projeto é fornecer uma resposta a pergunta: **"Quanto as pessoas estão ganhando trabalhando com Ruby?"**
 
-## "Quanto as pessoas estão ganhando trabalhando com Ruby?"
-
-### Porque não usar algo já existente?
+## Porque não usar algo já existente?
 
 Por duas razões.
 
@@ -14,17 +12,17 @@ Por duas razões.
 
 2 - Garimpando alguns desses sites eu disconfio fortemente que os dados estão errados. As médias são muito diferentes do que eu observo na prática.
 
-### Foco na simplicidade
+## Foco na simplicidade
 
 A essência do projeto é ser simples.
 
 O objetivo inicial é ter uma única página, onde terá a média geral e a opção para que a pessoa adicione o seu salário. Além do valor do salário a pessoa deverá informar também sua cidade para que seja possível, em um segundo momento, exibir as médias por região.
 
-### O que falta fazer para por a versão 1.0 no ar?
+## O que falta fazer para por a versão 1.0 no ar?
 
 Falta o principal, a interface com o usuário.
 
-### Como ajudar?
+## Como ajudar?
 
 A principal ajuda que eu gostaria de ter é com essa interface. Se você quiser ajudar você deve seguir o fluxo padrão em projetos aqui no Github.
 
