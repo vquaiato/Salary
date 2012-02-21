@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe City do
   fixtures :states, :cities
-  it { should have_valid(:name).when('Rio de Janeiro') }
-  it { should_not have_valid(:name).when('') }
-  it { should_not have_valid(:name).when(nil) }
-
-  it { should have_valid(:state).when(states(:rio_de_janeiro)) }
-  it { should_not have_valid(:state).when(nil) }
-  
+  describe "properties" do
+    it { should have_valid(:name).when('Rio de Janeiro') }
+    it { should_not have_valid(:name).when('') }
+    it { should_not have_valid(:name).when(nil) }
+    it { should have_valid(:state).when(states(:rio_de_janeiro)) }
+    it { should_not have_valid(:state).when(nil) }
+  end
   describe "average" do
     let(:rio_de_janeiro) { cities(:rio_de_janeiro) }
     it "should return the average of salaries" do

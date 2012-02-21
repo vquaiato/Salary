@@ -9,7 +9,7 @@ test:
   encoding: unicode
   database: salarios_test
   pool: 5
-  username: postgres
+  username: vquaiato
   host: localhost
 
 production:
