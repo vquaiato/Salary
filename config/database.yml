@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: salarios_development
-  username: postgres
+  username: vquaiato
   host: localhost
 test:
   adapter: postgresql
