@@ -1,9 +1,7 @@
-<%= form_for(salario) do |f| %>
-	<label for="estado">Estado</label>
-	<select name="estado">
-		<option>São Paulo</option>
-	</select>
-	<label for="cidae">Cidade</label>
+<%= form_for(salario,remote: true) do |f| %>
+	<%= label :city_state_id, "Estado" %>
+    <%= select :state, :name, @states.collect {|s| [ s.name, s.id ] }, {:prompt => 'Selecione Estado'}  %>
+	<label for="cidade">Cidade</label>
 	<select name="cidade">
 		<option>São Paulo</option>
 	</select>
