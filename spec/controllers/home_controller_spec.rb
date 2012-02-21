@@ -8,5 +8,9 @@ describe HomeController do
 
 			assigns(:states).first.name.should eq "Sampa"
 		end
+		it "should uses a new salary" do
+			get :index
+			assigns(:salario).should be_new_record
+		end
 	end
 end

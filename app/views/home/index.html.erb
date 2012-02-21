@@ -1,15 +1,2 @@
 <h3>Informe seu salário:</h3>
-
-<form>
-	<label for="estado">Estado</label>
-	<select name="estado">
-		<option>São Paulo</option>
-	</select>
-	<label for="cidae">Cidade</label>
-	<select name="cidade">
-		<option>São Paulo</option>
-	</select>
-	<label for="amount">Valor</label>
-	<input type="text"></input>
-	<button type="submit" value="Enviar">Enviar</button>
-</form>
+<%= render "form", salario: @salario %>
