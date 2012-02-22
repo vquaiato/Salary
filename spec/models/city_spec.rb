@@ -20,30 +20,4 @@ describe City do
       rio_de_janeiro.average.should == 0.0
     end
   end
-  describe "filtering cities" do
-    context "state that has cities" do
-      let(:state){State.create!(name: "Sampa")}
-      let(:city){City.create!(name:"Sampa City", state: state)}
-      let(:city2){City.create!(name:"Other City", state: state)}
-      
-      it "should return that cities" do
-        state
-        city
-        city2
-        
-        cities = City.by_state(state)
-        cities.should == [city,city2]
-      end
-    end
-    context "state that has no cities" do
-      let(:state){State.create!(name: "Sampa")}
-      
-      it "should not return cities" do
-        state
-        
-        cities = City.by_state(state)
-        cities.should be_empty
-      end
-    end
-  end
 end
