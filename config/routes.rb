@@ -51,6 +51,7 @@ Salarios::Application.routes.draw do
   root :to => 'home#index'
   resources :salaries do
   end
+  get "/cities/in/:state" => "state#cities"
 
   # See how all your routes lay out with "rake routes"
 

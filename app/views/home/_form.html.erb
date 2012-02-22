@@ -1,10 +1,8 @@
 <%= form_for(salario,remote: true) do |f| %>
 	<%= label :city_state_id, "Estado" %>
-    <%= select :state, :name, @states.collect {|s| [ s.name, s.id ] }, {:prompt => 'Selecione Estado'}  %>
-	<label for="cidade">Cidade</label>
-	<select name="cidade">
-		<option>São Paulo</option>
-	</select>
+    <%= select :state, :name, @states.collect {|s| [ s.name, s.id ] }, {:prompt => 'Selecione Estado'}, class: "estados"  %>
+	<%= f.label :city, "Cidade" %>
+  	<%= f.select :city, salario.new_record? || !@salario.city ? [] : @salario.city.state.cities.collect{ |c| [c.name, c.id] }, {include_blank: true}, class: "cidades"%>
 	<label for="amount">Valor</label>
 	<input type="text"></input>
 	<button type="submit" value="Enviar">Enviar</button>
