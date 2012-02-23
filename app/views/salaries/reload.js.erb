@@ -1,0 +1,15 @@
+<% if @salary.errors.any? %>
+	$("#notice").hide(400);
+	$("#errors").html("errors").show(400);
+<% else %>
+	$("#notice").html("sucesso").show(400);
+	$("#errors").hide(400);
+
+	$("form")[0].reset();
+	$('.cidades')
+	    .find('option')
+	    .remove()
+	    .end()
+	    .append('<option value="none">Selecione Estado antes</option>');
+	;
+<% end %>
