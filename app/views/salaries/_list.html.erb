@@ -1,0 +1,14 @@
+<table id="salaries">
+	<thead>
+		<th>Local</th>
+		<th>Salário</th>
+	</thead>
+	<tbody>
+		<% @salarios.each do |s| %>
+			<tr>
+				<td><%= s.city.name %> </td>
+				<td><%= s.amount %> </td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -1,5 +1,9 @@
-<h3>Informe seu salário:</h3>
-<div id="errors" style="display:none;"></div>
-<div id="notice" style="display:none"></div>
+<h3>Informe seu salário</h3>
+<div id="errors" class="alerts" style="display:none;"></div>
+<div id="success" class="alerts" style="display:none"></div>
 
 <%= render "form", salario: @salario %>
+
+<div id="salarios">
+	<%= render "salaries/list" %>
+</div>

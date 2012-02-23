@@ -1,9 +1,9 @@
 <% if @salary.errors.any? %>
-	$("#notice").hide(400);
-	$("#errors").html("errors").show(400);
+	$("#success").fadeOut(400);
+	$("#errors").html("errors").fadeIn(400);
 <% else %>
-	$("#notice").html("sucesso").show(400);
-	$("#errors").hide(400);
+	$("#errors").fadeOut(100);
+	$("#success").html("sucesso").fadeIn(100);
 
 	$("form")[0].reset();
 	$('.cidades')
@@ -12,4 +12,6 @@
 	    .end()
 	    .append('<option value="none">Selecione Estado antes</option>');
 	;
+
+	$("#salarios").html("<%= escape_javascript( render(partial: 'list') ) %>")
 <% end %>

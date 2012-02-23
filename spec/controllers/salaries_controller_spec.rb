@@ -19,7 +19,7 @@ describe SalariesController do
 				it "should not create the salary" do
 					post :create, salary:{amount: 'abc', city_id: city.id}	
 
-					assigns(:salary).should be_nil
+					assigns(:salary).persisted?.should be_false
 					response.should redirect_to root_path
 				end
 			end
