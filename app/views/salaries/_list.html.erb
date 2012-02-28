@@ -4,10 +4,10 @@
 		<th>Salário</th>
 	</thead>
 	<tbody>
-		<% @salarios.each do |s| %>
+		<% @salarios.each do |city, amount| %>
 			<tr>
-				<td><%= s.city.name %> </td>
-				<td><%= s.amount %> </td>
+				<td><%= city.name %> </td>
+				<td><%= amount %> </td>
 			</tr>
 		<% end %>
 	</tbody>

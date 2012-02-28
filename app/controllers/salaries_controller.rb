@@ -7,7 +7,7 @@ class SalariesController < ApplicationController
 		
 		if @salary.save
 			flash[:notice] = "Salário enviado."
-			@salarios = Salary.all
+			@salarios = Salary.grouped_by_cities
 		end
 
 		respond_with do |format|

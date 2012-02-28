@@ -10,11 +10,14 @@ describe HomeController do
 		end
 		context "when has previous salaries" do
 			it "should return the list of salaries" do
-				Salary.create!(amount: 100, city: City.create!(name: "Foo", state: State.create!(name: "Bar")))
+				city = City.create!(name: "Foo", state: State.create!(name: "Bar"))
+				Salary.create!(amount: 100, city: city)
 
 				get :index
 
-				assigns(:salarios).first.amount.should eq 100
+				expected = {city => 100}
+
+				assigns(:salarios).should eq expected
 			end
 		end
 		context "when has no previous salaries" do

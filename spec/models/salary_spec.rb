@@ -31,9 +31,9 @@ describe Salary do
 			it "two salaries should return one salary with the avarage amount" do
 				salaries = Salary.grouped_by_cities
 
-				salaries.size.should be 1
-				salaries.first[0].name.should eq "Sampa"
-				salaries.first[1].should eq 100
+				expected = {city => 100}
+
+				salaries.should eq expected
 			end
 
 			it "two salaries in two cities should return one salary with the avarage amount to each city" do
