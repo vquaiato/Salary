@@ -1,13 +1,15 @@
 <table id="salaries">
 	<thead>
-		<th>Local</th>
+		<th>Estado</th>
+		<th>Cidade</th>
 		<th>Salário</th>
 	</thead>
 	<tbody>
 		<% @salarios.each do |city, amount| %>
 			<tr>
+				<td><%= city.state.name %> </td>
 				<td><%= city.name %> </td>
-				<td><%= amount %> </td>
+				<td class="coluna_salario"><%= number_to_currency(amount, format: "%u %n", separator: ",", delimiter: ".", unit: "R$") %> </td>
 			</tr>
 		<% end %>
 	</tbody>

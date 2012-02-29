@@ -4,6 +4,6 @@ class Salary < ActiveRecord::Base
   belongs_to :city
 
   def self.grouped_by_cities
-  	salaries = Salary.average(:amount, group: :city)
+  	salaries = Salary.average(:amount, order: "1 desc", group: :city)
   end
 end

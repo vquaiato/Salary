@@ -1,13 +1,11 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
 body, h1, h2, h3{margin:0;padding:0;}
 
-body{background:url(bg2.png);color:#fff;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body{background:url(bg3.png);color:#fff;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
 h1 {font-family:Georgia, serif;}
-h1{font-size:72px;text-align:center;text-shadow:2px 2px 2px #f1f2f3;margin:10px;color:#363636;}
-h3{font-size:22px; padding:10px;text-shadow:1px 1px 1px #333;}
+h1{font-size:72px;text-align:center;text-shadow:1px 1px 2px #f1f2f3;margin:10px;color:#363636;}
+h1 span{font-size:82px;}
+h2{font-size:28px;text-align:center;text-shadow:1px 1px 2px #363636;margin:10px;color:#f1f2f3;margin-top:-10px;}
+h3{font-size:22px; padding:10px;text-shadow:1px 1px 1px #f1f2f3;color:#363636;}
 
 #content{
 	width:900px;margin:0 auto;
@@ -68,3 +66,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	border-color: #D6E9C6;
 	color: #468847;
 }
+
+div#salarios{
+	margin:15px 0 25px 0;
+}
+table{background:rgba(0, 0, 0, 0.4);border-radius:7px;}
+table#salaries{width:820px;}
+table#salaries thead{
+	color: #FC0;
+	text-align: center;
+	font-size:18px;
+}
+table#salaries tbody tr:hover{background:rgba(255,255,255,0.1);}
+tbody tr td{padding:7px;}
+.coluna_salario{text-align:center;font-weight:bold;}
