@@ -9,7 +9,7 @@
 			<tr>
 				<td><%= city.state.name %> </td>
 				<td><%= city.name %> </td>
-				<td class="coluna_salario"><%= number_to_currency(amount, format: "%u %n", separator: ",", delimiter: ".", unit: "R$") %> </td>
+				<td class="coluna_salario" title="salário programador ruby/rails em <%=city.state.name %> - <%= city.name%>"><%= number_to_currency(amount, format: "%u %n", separator: ",", delimiter: ".", unit: "R$") %> </td>
 			</tr>
 		<% end %>
 	</tbody>
