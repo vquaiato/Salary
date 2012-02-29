@@ -5,4 +5,8 @@ class City < ActiveRecord::Base
   def average
     self.salaries.average(:amount) || 0.0
   end
+
+  def self.by_state(state)
+	City.find_all_by_state_id(state.id)	
+  end
 end

@@ -2,18 +2,23 @@
 <html>
 <head>
   <title>Salarios</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <META NAME="DESCRIPTION" CONTENT="Rails Salary: an app to track the avarage salary of Rails programmers, uma aplicação para ver o salário médio pago aos programadores Rails">
+  <META NAME="KEYWORDS" CONTENT="rails, salary, rails salary, salário rails, salário ruby, salário programador rails, salário programador ruby">
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div id="header">
-    Média de salários
+    <h1>Rails <span>$</span>alary</h1>
+    <h2>média de quanto é pago aos programadores Rails</h2>
+    <hr/>
   </div>
   <div id="content">
     <%= yield %>
   </div>
   <div id="footer">
   </div>
+<a href="http://github.com/vquaiato/Salary"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

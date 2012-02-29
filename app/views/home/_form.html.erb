@@ -1,0 +1,9 @@
+<%= form_for(salario, remote: true) do |f| %>
+	<%= label :city_state, "Estado" %>
+    <%= select :city_state,"state", @states.collect {|s| [ s.name, s.id ] }, {:prompt => 'Selecione Estado'}, class: "estados"  %>
+	<%= f.label :city, "Cidade" %>
+  	<%= f.select :city_id, [], {:prompt => 'Selecione Estado antes'}, class: "cidades" %>
+	<%= f.label :amount, "Salário" %>
+	<%= f.text_field :amount %>
+	<%= f.button "Enviar", type: "submit" %>
+<% end %>
