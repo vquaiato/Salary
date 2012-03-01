@@ -11,7 +11,7 @@ h3{font-size:22px; padding:10px;text-shadow:1px 1px 1px #f1f2f3;color:#363636;}
 	width:900px;margin:0 auto;
 }
 
-label{display:inline-block;margin-left:15px;margin-right:5px;text-shadow:1px 1px 1px #333;}
+label{display:inline-block;margin-left:15px;margin-right:5px;text-shadow:1px 1px 1px #f1f2f3;color:#333;}
 select, input{display: inline-block;width:150px;}
 select{height: 28px;line-height: 28px;font-size: 13px;border-radius: 4px;margin-right:280px;margin-bottom:10px;}
 
