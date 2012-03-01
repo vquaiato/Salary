@@ -2,14 +2,14 @@ development:
   adapter: postgresql
   encoding: unicode
   database: salarios_development
-  username: vquaiato
+  username: postgres
   host: localhost
 test:
   adapter: postgresql
   encoding: unicode
   database: salarios_test
   pool: 5
-  username: vquaiato
+  username: postgres
   host: localhost
 
 production:

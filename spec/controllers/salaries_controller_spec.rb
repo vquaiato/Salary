@@ -12,6 +12,12 @@ describe SalariesController do
 				assigns(:salary).amount.should eq 1000
 				assigns(:salary).city.should eq city
 			end
+      it "should create the salary when receive a salary in a js mask" do
+				post :create, salary:{amount: "R$ 1.000,00", city_id: city.id}
+        
+				assigns(:salary).amount.should eq 1000
+				assigns(:salary).city.should eq city
+      end
 		end
 
 		context "with and invalid salary" do

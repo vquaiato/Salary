@@ -4,6 +4,7 @@ gem 'rails', '3.2.1'
 gem 'pg'
 gem 'jquery-rails'
 gem 'database_cleaner'
+gem "money"
 
 group :development do
   gem 'thin'
