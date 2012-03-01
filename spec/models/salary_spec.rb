@@ -5,6 +5,8 @@ describe Salary do
   context "properties" do
 	  it { should have_valid(:amount).when(1000) }
 	  it { should have_valid(:amount).when(1000.99) }
+    it { should have_valid(:amount).when("1.000,99") }
+    it { should have_valid(:amount).when("R$ 1.000,99") }
 	  it { should_not have_valid(:amount).when('') }
 	  it { should_not have_valid(:amount).when(nil) }
 	  it { should_not have_valid(:amount).when('salary') }
