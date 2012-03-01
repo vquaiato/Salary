@@ -1,9 +1,18 @@
-<%= form_for(salario, remote: true) do |f| %>
-	<%= label :city_state, "Estado" %>
-    <%= select :city_state,"state", @states.collect {|s| [ s.name, s.id ] }, {:prompt => 'Selecione Estado'}, class: "estados"  %>
-	<%= f.label :city, "Cidade" %>
-  	<%= f.select :city_id, [], {:prompt => 'Selecione Estado antes'}, class: "cidades" %>
-	<%= f.label :amount, "Salário" %>
-	<%= f.text_field :amount %>
-	<%= f.button "Enviar", type: "submit" %>
-<% end %>
+<div id="osx-modal-content">
+	<div id="osx-modal-title">Colabore informando seu salário e cidade</div>
+	<div class="close"><a href="#" class="simplemodal-close">x</a></div>
+	<div id="osx-modal-data" class="center">
+		<div id="errors" class="alerts" style="display:none;"></div>
+		<div id="success" class="alerts" style="display:none"></div>
+
+		<%= form_for(salario, remote: true) do |f| %>
+			<%= label :city_state, "Estado" %>
+		    <%= select :city_state,"state", @states.collect {|s| [ s.name, s.id ] }, {:prompt => 'Selecione Estado'}, class: "estados"  %>
+			<%= f.label :city, "Cidade" %>
+		  	<%= f.select :city_id, [], {:prompt => 'Selecione Estado antes'}, class: "cidades" %>
+			<%= f.label :amount, "Salário" %>
+			<%= f.text_field :amount %>
+			<%= f.button "Enviar", type: "submit" %>
+		<% end %>
+	</div>
+</div>

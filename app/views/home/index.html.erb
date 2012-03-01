@@ -1,4 +1,7 @@
-<h3>Colabore</h3>
-<div id="errors" class="alerts" style="display:none;"></div>
-<div id="success" class="alerts" style="display:none"></div>
+<h3>Colabore também: <a href="#" id="informar_salario">informar salário</a></h3>
 
+<div id="salarios">  	
+	<%= render "salaries/list" %>  	
+</div>
+
+<%= render "form", salario: @salario %>
