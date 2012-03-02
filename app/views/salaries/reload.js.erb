@@ -1,9 +1,9 @@
 <% if @salary.errors.any? %>
 	$("#success").fadeOut(400);
-	$("#errors").html("errors").fadeIn(400);
+	$("#errors").html("<%= escape_javascript( render(partial: 'errors') ) %>").fadeIn(400);
 <% else %>
-	$("#errors").fadeOut(100);
-	$("#success").html("sucesso").fadeIn(100);
+	$("#errors").fadeOut(400);
+	$("#success").html("sucesso").fadeIn(400);
 
 	$("form")[0].reset();
 	$('.cidades')
@@ -14,4 +14,6 @@
 	;
 
 	$("#salarios").html("<%= escape_javascript( render(partial: 'list') ) %>")
+
+	OSX.close();
 <% end %>

@@ -25,12 +25,9 @@ describe Salary do
 			let(:sal2){Salary.create! amount: 100, city: city2}
 			let(:sal3){Salary.create! amount: 100, city: city2}
 
-			before do
+			it "two salaries should return one salary with the avarage amount" do
 				sal
 				sal1
-			end
-
-			it "two salaries should return one salary with the avarage amount" do
 				salaries = Salary.grouped_by_cities
 
 				expected = {city => 100}
@@ -38,7 +35,22 @@ describe Salary do
 				salaries.should eq expected
 			end
 
+			it "four salaries should return one salary with the avarage amount" do
+				Salary.create! amount: "100,35", city: city
+				Salary.create! amount: "130,00", city: city
+				Salary.create! amount: 475, city: city
+				Salary.create! amount: "1.321,77", city: city
+
+				salaries = Salary.grouped_by_cities
+
+				expected = {city => 506.78}
+
+				salaries.should eq expected
+			end
+
 			it "two salaries in two cities should return one salary with the avarage amount to each city" do
+				sal
+				sal1
 				sal2
 				sal3
 

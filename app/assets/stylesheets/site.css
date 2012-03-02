@@ -5,7 +5,7 @@ h1 {font-family:Georgia, serif;}
 h1{font-size:72px;text-align:center;text-shadow:1px 1px 2px #f1f2f3;margin:10px;color:#363636;}
 h1 span{font-size:82px;}
 h2{font-size:28px;text-align:center;text-shadow:1px 1px 2px #363636;margin:10px;color:#f1f2f3;margin-top:-10px;}
-h3{font-size:22px; padding:10px;text-shadow:1px 1px 1px #f1f2f3;color:#363636;}
+h3{font-size:22px; padding:10px;text-shadow:1px 1px 1px #f1f2f3;color:#363636;width:820px;margin:0 auto;}
 
 #content{
 	width:900px;margin:0 auto;
@@ -48,8 +48,12 @@ box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05
 cursor: pointer;
 filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
+
+#new_salary label{width:60px;}
+
 #gotcha{background:#ddd;padding: 5px 0;height: 30px;margin-bottom:10px;}
 #gotcha input[type=text]{margin-right:150px;width:45px;}
+#gotcha label{width:auto;}
 
 .alerts{
 	-webkit-border-radius: 4px;
@@ -72,7 +76,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 div#salarios{
 	margin:15px 0 25px 0;
 }
-table{background:rgba(0, 0, 0, 0.4);border-radius:7px;}
+table{background:rgba(0, 0, 0, 0.4);border-radius:7px;margin:0 auto;}
 table#salaries{width:820px;}
 table#salaries thead{
 	color: #FC0;
@@ -82,3 +86,12 @@ table#salaries thead{
 table#salaries tbody tr:hover{background:rgba(255,255,255,0.1);}
 tbody tr td{padding:7px;}
 .coluna_salario{text-align:center;font-weight:bold;}
+#informar_salario{
+	display: inline-block;
+background: #21417F;
+padding: 3px 10px;
+border-radius: 5px;
+color: #F1F2F3;
+text-shadow: 1px 1px 1px #333;
+text-decoration: none;
+}
