@@ -12,6 +12,9 @@
 		  	<%= f.select :city_id, [], {:prompt => 'Selecione Estado antes'}, class: "cidades" %>
 			<%= f.label :amount, "Salário" %>
 			<%= f.text_field :amount %>
+			<div id="gotcha">
+				<%= gotcha %>
+			</div>
 			<%= f.button "Enviar", type: "submit" %>
 		<% end %>
 	</div>

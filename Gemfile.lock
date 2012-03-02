@@ -1,3 +1,9 @@
+GIT
+  remote: ../gotcha/.git
+  revision: a412817b35838606c79fbc0472e3f760508fb4fb
+  specs:
+    gotcha (0.0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -112,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   database_cleaner
+  gotcha!
   jquery-rails
   money
   pg
