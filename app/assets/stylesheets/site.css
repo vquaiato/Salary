@@ -82,16 +82,22 @@ table#salaries thead{
 	color: #FC0;
 	text-align: center;
 	font-size:18px;
+	text-shadow:1px 1px 1px #333;
 }
 table#salaries tbody tr:hover{background:rgba(255,255,255,0.1);}
-tbody tr td{padding:7px;}
+tbody tr td{padding:7px;text-shadow:1px 1px 1px #333;}
 .coluna_salario{text-align:center;font-weight:bold;}
 #informar_salario{
 	display: inline-block;
 background: #21417F;
 padding: 3px 10px;
 border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
 color: #F1F2F3;
 text-shadow: 1px 1px 1px #333;
 text-decoration: none;
+box-shadow: 1px 1px 1px #333;
+-webkit-box-shadow: 1px 1px 1px #333;
+-moz-box-shadow: 1px 1px 1px #333;
 }
