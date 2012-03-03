@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:vquaiato/gotcha.git
-  revision: a412817b35838606c79fbc0472e3f760508fb4fb
+  remote: https://github.com/vquaiato/gotcha.git
+  revision: 5527952b03ec97b8b051fbcbb02f26bb98c02c28
   specs:
     gotcha (0.0.6)
 

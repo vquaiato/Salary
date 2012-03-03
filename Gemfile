@@ -4,7 +4,7 @@ gem 'rails', '3.2.1'
 gem 'pg'
 gem 'jquery-rails'
 gem "money"
-gem 'gotcha', :git => "git@github.com:vquaiato/gotcha.git"
+gem 'gotcha', :git => "https://github.com/vquaiato/gotcha.git"
 
 group :development do
   gem 'thin'
