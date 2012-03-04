@@ -1,13 +1,18 @@
 #encoding: UTF-8
 class SalariesController < ApplicationController
 	respond_to :html, :js
-	
+	def index
+		@states = State.all
+		@salario = Salary.new
+		@salarios = Salary.grouped_by_cities
+	end
+
 	def create
 		@salary = Salary.new(params[:salary])
-		
+
 		if not gotcha_valid?
 			@salary.errors.add "captcha", "incorreto"
-		else		
+		else
 			@salarios = Salary.grouped_by_cities if @salary.save
 		end
 
