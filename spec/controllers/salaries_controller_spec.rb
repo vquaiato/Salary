@@ -11,11 +11,11 @@ describe SalariesController do
 		context "when has previous salaries" do
 			it "should return the list of salaries" do
 				city = City.create!(name: "Foo", state: State.create!(name: "Bar"))
-				Salary.create!(amount: 100, city: city)
+				Salary.create!(amount: 1000, city: city)
 
 				get :index
 
-				expected = {city => 100}
+				expected = {city => 1000}
 
 				assigns(:salarios).should eq expected
 			end
@@ -33,28 +33,81 @@ describe SalariesController do
 		end
 	end
 	context "creating a new salary" do
-			let(:state){State.create!(name:"Sampa State")}
-			let(:city){City.create!(name: "Sampa", state: state)}
+		before do
+			Gotcha.skip_validation = true
+		end
+		let(:state){State.create!(name:"Sampa State")}
+		let(:city){City.create!(name: "Sampa", state: state)}
 
 		context "with a valid salary" do
 			it "should create the salary" do
 				post :create, salary:{amount: 1000, city_id: city.id}
 
+				assigns(:salary).persisted?.should be_true
 				assigns(:salary).amount.should eq 1000
 				assigns(:salary).city.should eq city
 			end
-      it "should create the salary when receive a salary in a js mask" do
+			it "should create the salary when receive a salary in a js mask" do
 				post :create, salary:{amount: "R$ 1.000,00", city_id: city.id}
 
+				assigns(:salary).persisted?.should be_true
 				assigns(:salary).amount.should eq 1000
 				assigns(:salary).city.should eq city
-      end
+			end
+			context "and invalid captcha" do
+				before do
+					Gotcha.skip_validation = false
+				end
+				it "should not create the salary" do
+					post :create, salary:{amount: 1000, city_id: city.id}
+
+					assigns(:salary).persisted?.should be_false
+					assigns(:salary).errors[:captcha].should eq ["incorreto"]
+					response.should redirect_to root_path
+				end
+			end
+			context "with too high amount" do
+				it "should not create with amount higher than 15k as string" do
+					post :create, salary:{amount: "R$ 16.000,00", city_id: city.id}
+
+					assigns(:salary).persisted?.should be_false
+					response.should redirect_to root_path
+				end
+				it "should not create with amount higher than 15k" do
+					post :create, salary:{amount: 16000, city_id: city.id}
+
+					assigns(:salary).persisted?.should be_false
+					response.should redirect_to root_path
+				end
+			end
 		end
 
-		context "with and invalid salary" do
-			context "with invalid amount" do
+		context "with an invalid salary amount" do
+			context "with a string amount" do
 				it "should not create the salary" do
 					post :create, salary:{amount: 'abc', city_id: city.id}
+
+					assigns(:salary).persisted?.should be_false
+					response.should redirect_to root_path
+				end
+			end
+			context "with a negative amount" do
+				it "should not create the salary" do
+					post :create, salary:{amount: -1000, city_id: city.id}
+
+					assigns(:salary).persisted?.should be_false
+					response.should redirect_to root_path
+				end
+			end
+			context "with amount lower than 750 amount" do
+				it "should not create the salary with 700 amount" do
+					post :create, salary:{amount: 700, city_id: city.id}
+
+					assigns(:salary).persisted?.should be_false
+					response.should redirect_to root_path
+				end
+				it "should not create the salary with 1 amount" do
+					post :create, salary:{amount: 1, city_id: city.id}
 
 					assigns(:salary).persisted?.should be_false
 					response.should redirect_to root_path
