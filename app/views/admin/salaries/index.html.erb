@@ -1,0 +1,24 @@
+<h3>Salarios</h3>
+
+<table id="salaries">
+	<thead>
+    <th>Id</th>
+		<th>Estado</th>
+		<th>Cidade</th>
+    <th>Adicionado em</th>
+		<th>Salário</th>
+    <th>Excluir</th>
+	</thead>
+	<tbody>
+		<% @salaries.each do |salary| %>
+			<tr>
+        <td><%= salary.id %></td>
+				<td><%= salary.city.state.name %> </td>
+				<td><%= salary.city.name %> </td>
+        <td><%= salary.created_at %></td>
+				<td class="coluna_salario"><%= number_to_currency(salary.amount, format: "%u %n", separator: ",", delimiter: ".", unit: "R$") %> </td>
+        <td><%= link_to "Excluir", admin_salary_path(salary), method: :delete, confirm: "Tem certeza?"%></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
