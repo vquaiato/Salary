@@ -1,4 +1,6 @@
 Salarios::Application.routes.draw do
+  devise_for :admins
+
   root :to => 'salaries#index'
   resources :salaries do
   end
