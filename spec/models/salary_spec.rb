@@ -48,7 +48,7 @@ describe Salary do
 
 				salaries = Salary.grouped_by_cities
 				expected = {city => 1000.25}
-
+        
 				salaries.should eq expected
 			end
 

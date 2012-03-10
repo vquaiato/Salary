@@ -9,7 +9,7 @@ class Salary < ActiveRecord::Base
 
   def amount= amount
     if amount.is_a? String
-      amount = BigDecimal.new(amount.to_money.to_s)
+      amount = BigDecimal.new(amount.to_money.to_f.to_s)
       amount = nil if amount == 0
     end
     write_attribute :amount, amount
