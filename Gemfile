@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem "money"
 gem 'gotcha', :git => "https://github.com/vquaiato/gotcha.git"
+#gem 'gotcha', :git => "../gotcha/.git"
 
 group :development do
   gem 'thin'

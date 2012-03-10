@@ -1,0 +1,1 @@
+Gotcha.register_type SumGotcha

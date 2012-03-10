@@ -1,0 +1,10 @@
+# encoding: UTF-8
+# pt-BR translations for Ruby on Rails
+"pt-BR":
+  sum:
+    of:
+      text: "Qual a soma de %{n1} e %{n2}?"
+    howmuch:
+      text: "Quanto é %{n1} + %{n2}?"
+  backwards:
+    text: "Escreva '%{word}' ao contrário."
