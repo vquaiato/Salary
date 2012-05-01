@@ -43,11 +43,11 @@ describe Salary do
 			it "four salaries should return one salary with the avarage amount" do
 				Salary.create! amount: "1000,10", city: city
 				Salary.create! amount: "1000,10", city: city
-				Salary.create! amount: 1000.10, city: city
+				Salary.create! amount: "1000,10", city: city
 				Salary.create! amount: "1.000,10", city: city
 
 				salaries = Salary.grouped_by_cities
-				expected = {city => 1000.025}
+				expected = {city => 1000.10}
 				salaries.should eq expected
 			end
 

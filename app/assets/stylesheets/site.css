@@ -15,7 +15,7 @@ label{display:inline-block;margin-left:15px;margin-right:5px;text-shadow:1px 1px
 select, input{display: inline-block;width:150px;}
 select{height: 28px;line-height: 28px;font-size: 13px;border-radius: 4px;margin-right:280px;margin-bottom:10px;}
 
-input[type='text']{display: inline-block;width: 145px;height: 18px;padding: 4px;margin-bottom: 9px;font-size: 13px;line-height: 18px;color: #555;border: 1px solid #CCC;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;margin-right:280px;}
+input[type='text'],input[type='email'],input[type='password']{display: inline-block;width: 145px;height: 18px;padding: 4px;margin-bottom: 9px;font-size: 13px;line-height: 18px;color: #555;border: 1px solid #CCC;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;margin-right:280px;}
 
 button[type='submit']{display: inline-block;
 padding: 4px 10px 4px;
